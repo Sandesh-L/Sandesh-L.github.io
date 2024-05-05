@@ -1,61 +1,186 @@
 // src/pages/index.js
 import React from 'react';
 import { Link } from 'gatsby';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
+import SEO from '../components/seo';
+import maybeHeroImage from "../images/hero.webp";
+import WorkExperience from '../components/WorkExperience';
+import Education from '../components/Education';
+import Skills from '../components/Skills';
 
-const HomePage = () => {
-  return (
-    <Layout>
-      <section className="bg-background-100 text-text-900 py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-          <p className="text-xl mb-8">
-            Hi, I'm [Your Name], a [Your Profession/Title].
-          </p>
-          <div className="mb-12">
-            <p className="mb-4">
-              [Brief introduction about yourself, your skills, and your passion.]
-            </p>
-            <p>
-              [Additional information or a call-to-action, e.g., "Check out my projects and resume!"]
-            </p>
-          </div>
-          <div className="flex space-x-4">
-            <Link
-              to="/projects"
-              className="bg-primary-500 text-background-50 px-6 py-3 rounded hover:shadow-accent hover:shadow-md transition duration-300"
-            >
-              View Projects
-            </Link>
-            <Link
-              to="/resume"
-              className="bg-secondary-500 text-background-50 px-6 py-3 rounded hover:shadow-accent hover:shadow-md transition duration-300"
-            >
-              View Resume
-            </Link>
-          </div>
+const HomePage = () => (
+  <Layout className='bg-background-950'>
+    <SEO title="Home" />
+    <div className='bg-gradient-to-b from-primary-200 to-background-950'>
+      <section id="hero" className='py-32'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className='flex flex-col md:flex-row items-center justify-between'
+          >
+            <div className='md:w-1/2'>
+              <motion.img
+                initial={{ opacity: 0, scale: 0.4 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                src={maybeHeroImage}
+                alt="My Name"
+                className='rounded-full shadow-lg object-cover mx-auto'
+              />
+            </div>
+            <div className='md:w-1/2 mb-8 md:mb-0 px-10'>
+              <motion.h1
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className='text-4xl font-bold mb-4 text-text-50'
+              >
+                My Name
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
+                className='text-lg mb-4 text-white'
+              >
+                Quick blurb about me.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className='text-lg mb-2 text-text-700'
+              >
+                <strong>Current Position:</strong> <span>Job Title</span>
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 1 }}
+                className='text-lg mb-6 text-secondary-900'
+              >
+                <strong>Master's Degree:</strong> Computer Science <br />
+                <strong>Bachelor's Degrees:</strong> Computer Science & Mathematics
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 1.2 }}
+                className='flex space-x-4'
+              >
+                <Link
+                  to='/contact'
+                  className='bg-primary-500 hover:bg-primary-600 text-background-950 font-bold py-2 px-4 rounded'
+                >
+                  Contact Me
+                </Link>
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  href="https://www.linkedin.com/in/Myprofile"
+                  target="\_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary-400 hover:text-secondary-600"
+                >
+                  <FaLinkedin size={24} />
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  href="https://github.com/Myusername"
+                  target="\_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary-400 hover:text-secondary-600"
+                >
+                  <FaGithub size={24} />
+                </motion.a>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
-      <section className="bg-background-200 py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-accent-700">About Me</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="mb-4">
-                [More detailed information about yourself, your background, and your experience.]
-              </p>
-              <p>
-                [Additional information or highlights of your skills and achievements.]
-              </p>
+      <section id='resume'>
+        <div className="py-12">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="max-w-4xl mx-auto bg-white text-900 shadow-lg rounded-lg overflow-hidden"
+          >
+            <div className="px-6 py-8">
+              <motion.h1
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="text-4xl font-bold mb-4"
+              >
+                My Name
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className="text-lg mb-4"
+              >
+                My Profession/Title
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
+                className="mb-8"
+              >
+                <p>Email: My.email@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Location: City, Country</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className="mb-8"
+              >
+                <h2 className="text-2xl font-bold mb-2">Summary</h2>
+                <p>
+                  A brief summary highlighting My professional experience, skills, and career objectives.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 1 }}
+                className="mb-8"
+              >
+                <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
+                <WorkExperience />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 1.2 }}
+                className="mb-8"
+              >
+                <h2 className="text-2xl font-bold mb-4">Education</h2>
+                <Education />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 1.4 }}
+              >
+                <h2 className="text-2xl font-bold mb-4">Skills</h2>
+                <Skills />
+              </motion.div>
             </div>
-            <div>
-              {/* You can add an image of yourself or any other relevant content */}
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
-    </Layout>
-  );
-};
+    </div>
+  </Layout>
+);
 
 export default HomePage;
