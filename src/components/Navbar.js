@@ -1,7 +1,7 @@
 // Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import logo from '../images/Logo.png';
+// import logo from '../images/Logo.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {

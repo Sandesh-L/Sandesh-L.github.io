@@ -1,21 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCards';
 
 const ProjectsPage = () => {
-  const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    fetch('../../projects.json')
-      .then((response) => response.json())
-      .then((data) => setProjects(data))
-      .catch((error) => console.error('Error fetching projects: ', error));
-  }, []);
+  const data = useStaticQuery(graphql`
+    query{
+      allProjectsJson {
+        edges {
+          node {
+            id
+            title
+            description
+            tags
+            githubLink
+            websiteLink
+            slug
+          }
+        }
+      }
+    }
+  `);
+  const projects = data.allProjectsJson.edges.map((edge)=>edge.node) || [];
 
   return (
     <Layout>
-      <div className="min-h-fit bg-gradient-to-b from-primary-200 to-background-950 h-screen">
+      <div className="min-h-screen bg-gradient-to-b from-primary-200 to-background-950">
         <div className="py-12">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -27,29 +39,29 @@ const ProjectsPage = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-3xl font-bold mb-8 text-900"
+              className="text-3xl font-bold mb-8 text-text-900"
             >
               Projects
             </motion.h1>
-            {projects.length > 0 ? (
+            {projects.length > 0 ?(
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
-                className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+                className="columns-1 gap-8 md:columns-2 lg:columns-3"
               >
-                {projects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
+                {projects.map((project, index) => (
+                  <ProjectCard key={index} project={project} />
                 ))}
               </motion.div>
             ) : (
               <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.4 }}
-              >
-                Loading Projects...
-              </motion.p>
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  No projects found.
+                </motion.p>
             )}
           </motion.div>
         </div>

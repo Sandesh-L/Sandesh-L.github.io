@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['NotoSans', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        sans: ["Roboto", "sans-serif"],
+        serif: ["Roboto Serif", "serif"]
       },
       spacing: {
         '8xl': '96rem',

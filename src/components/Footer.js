@@ -19,7 +19,7 @@ const Footer = () => {
           Contacts
         </Link>
       </div>
-      <div className="text-sm">&copy; {new Date().getFullYear()} Your Website Name</div>
+      <div className="text-sm">&copy; {new Date().getFullYear()} Sandesh Lamichhane</div>
     </footer>
   );
 };

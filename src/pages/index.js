@@ -1,16 +1,17 @@
 // src/pages/index.js
 import React from 'react';
-import { Link } from 'gatsby';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import maybeHeroImage from "../images/hero.webp";
+import maybeHeroImage from "../images/photo.jpg";
 import WorkExperience from '../components/WorkExperience';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
 
-const HomePage = () => (
+const HomePage = () => {
+
+return(
   <Layout className='bg-background-950'>
     <SEO title="Home" />
     <div className='bg-gradient-to-b from-primary-200 to-background-950'>
@@ -28,7 +29,7 @@ const HomePage = () => (
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
                 src={maybeHeroImage}
-                alt="My Name"
+                alt="Sandesh Lamichhane"
                 className='rounded-full shadow-lg object-cover mx-auto'
               />
             </div>
@@ -39,7 +40,7 @@ const HomePage = () => (
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className='text-4xl font-bold mb-4 text-text-50'
               >
-                My Name
+                Sandesh Lamichhane.
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, x: -50 }}
@@ -47,7 +48,8 @@ const HomePage = () => (
                 transition={{ duration: 0.4, delay: 0.6 }}
                 className='text-lg mb-4 text-white'
               >
-                Quick blurb about me.
+                <p>Software Developer | Musician</p>
+                <p>I'm available for freelance projects. Reach out if you want to connect!</p>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, x: -50 }}
@@ -78,26 +80,12 @@ const HomePage = () => (
                 >
                   Contact Me
                 </Link>
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  href="https://www.linkedin.com/in/Myprofile"
-                  target="\_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary-400 hover:text-secondary-600"
+                <Link
+                  to='/projects'
+                  className='bg-secondary-400 hover:bg-secondary-500 text-background-950 font-bold py-2 px-4 rounded'
                 >
-                  <FaLinkedin size={24} />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  href="https://github.com/Myusername"
-                  target="\_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary-400 hover:text-secondary-600"
-                >
-                  <FaGithub size={24} />
-                </motion.a>
+                  View Projects
+                </Link>
               </motion.div>
             </div>
           </motion.div>
@@ -109,14 +97,14 @@ const HomePage = () => (
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-4xl mx-auto bg-white text-900 shadow-lg rounded-lg overflow-hidden"
+            className="max-w-5xl mx-auto bg-white text-900 shadow-lg rounded-lg overflow-hidden"
           >
             <div className="px-6 py-8">
               <motion.h1
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="text-4xl font-bold mb-4"
+                className="text-4xl font-bold mb-4 text-background-200"
               >
                 My Name
               </motion.h1>
@@ -152,20 +140,21 @@ const HomePage = () => (
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.7 }}
+                className="mb-8"
+              >
+                <h2 className="text-2xl font-bold mb-4">Education</h2>
+                <Education />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 1 }}
                 className="mb-8"
               >
                 <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
                 <WorkExperience />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 1.2 }}
-                className="mb-8"
-              >
-                <h2 className="text-2xl font-bold mb-4">Education</h2>
-                <Education />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -181,6 +170,6 @@ const HomePage = () => (
       </section>
     </div>
   </Layout>
-);
+)};
 
 export default HomePage;

@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 
 const ContactPage = () => {
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const subject = document.getElementById('subject').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const mailtoUrl = `mailto:${email}?subject=${subject}&body=${encodeURIComponent(message)}`;
+
+    window.location.href = mailtoUrl;
+  }
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-b from-primary-200 to-background-950 text-text-900">
@@ -21,28 +33,33 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="bg-secondary-200 rounded-lg shadow-lg p-8"
+              className="bg-primary-200 rounded-lg shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-4 text-text-900">Get in Touch</h2>
               <p className="mb-4">
-                Have any questions or inquiries? Feel free to reach out to us. We'd love to hear from you!
+                Have any questions or inquiries? Feel free to reach out to me. I'd love to hear from you!
+                For prompt response text me, but be sure to mention who you are and how you got my information.
               </p>
               <div className="flex items-center mb-4">
                 <FaEnvelope className="text-primary-500 mr-2" />
-                <a href="mailto:info@example.com" className="text-text-900 hover:text-secondary-600">
-                  info@example.com
+                <a href="mailto:sandesh.lamichhane1@gmail.com" className="text-text-900 hover:text-secondary-600">
+                sandesh.lamichhane1@gmail.com
                 </a>
               </div>
               <div className="flex items-center mb-4">
                 <FaPhone className="text-primary-500 mr-2" />
-                <a href="tel:+1234567890" className="text-text-900 hover:text-secondary-600">
-                  +1 (234) 567-890
+                <a href="tel:+18593537632" className="text-text-900 hover:text-secondary-600">
+                  +1 (859) 353-7632
                 </a>
               </div>
               <div className="flex items-center mb-4">
                 <FaLinkedin className="text-primary-500 mr-2" />
-                <a href="linkedin.com" className="text-text-900 hover:text-secondary-600">
-                  LinkedIn
+                <a href="https://www.linkedin.com/in/sandesh-l/" 
+                  target="_blank"
+                  rel="noopener noreferrer"  
+                  className="text-text-900 hover:text-secondary-600"
+                >
+                  Sandesh-L
                 </a>
               </div>
             </motion.div>
@@ -50,20 +67,10 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="bg-secondary-200 rounded-lg shadow-lg p-8"
+              className="bg-background-200 rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-2xl font-bold mb-4 text-primary-500">Send us a Message</h2>
-              <form>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 bg-background-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  />
-                </div>
+              <h2 className="text-2xl font-bold mb-4 text-primary-500">Send me a Message</h2>
+              <form action='mailto:sandesh.lamichhane1@gmail.com' method='GET'>
                 <div className="mb-4">
                   <label htmlFor="email" className="block mb-2">
                     Email
@@ -71,9 +78,22 @@ const ContactPage = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 bg-background-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 bg-background-800 rounded-lg text-text-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    value='sandesh.lamichhane1@gmail.com'
+                    disabled='true'
                   />
                 </div>
+                <div className="mb-4">
+                  <label htmlFor="subject" className="block mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    className="w-full px-4 py-2 bg-background-800 rounded-lg text-text-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  />
+                </div>
+                
                 <div className="mb-4">
                   <label htmlFor="message" className="block mb-2">
                     Message
@@ -81,13 +101,14 @@ const ContactPage = () => {
                   <textarea
                     id="message"
                     rows="4"
-                    className="w-full px-4 py-2 bg-background-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 bg-background-800 rounded-lg text-text-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   ></textarea>
                 </div>
                 <motion.button
+                  onClick={handleEmailClick}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-primary-500 text-background-950 px-6 py-2 rounded-lg"
+                  className="bg-primary-500 text-background-950 px-6 py-2 text-text-100 rounded-lg"
                 >
                   Send Message
                 </motion.button>
