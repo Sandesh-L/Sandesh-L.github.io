@@ -18,7 +18,8 @@ const ProjectCard = ({ project }) => {
       className='py-3 break-inside-avoid-column'
     >
       <Link
-        to={`/projects/${project.slug}`}
+        // to={`/projects/${project.slug}`}
+        to={`/projects/#`}
         className="block bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
         <div className="p-6">
