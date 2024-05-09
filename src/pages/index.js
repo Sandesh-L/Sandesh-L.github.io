@@ -1,6 +1,6 @@
 // src/pages/index.js
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link} from 'gatsby';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
@@ -57,7 +57,7 @@ return(
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className='text-lg mb-2 text-text-700'
               >
-                <strong>Current Position:</strong> <span>Job Title</span>
+                <strong>Current Position:</strong> <span>Student Researcher Technical Staff</span>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, x: -50 }}
@@ -106,7 +106,7 @@ return(
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="text-4xl font-bold mb-4 text-background-200"
               >
-                My Name
+                Sandesh Lamichhane
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, x: -50 }}
@@ -114,7 +114,7 @@ return(
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className="text-lg mb-4"
               >
-                My Profession/Title
+                Student Researcher Technical Staff | Software Developer
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -122,11 +122,11 @@ return(
                 transition={{ duration: 0.4, delay: 0.6 }}
                 className="mb-8"
               >
-                <p>Email: My.email@example.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Location: City, Country</p>
+                <p>Email: sandesh.lamichhane1@gmail.com</p>
+                <p>Phone: (859) 353-7632</p>
+                <p>Location: Richmond, U.S.A</p>
               </motion.div>
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
@@ -136,7 +136,7 @@ return(
                 <p>
                   A brief summary highlighting My professional experience, skills, and career objectives.
                 </p>
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -146,23 +146,22 @@ return(
                 <h2 className="text-2xl font-bold mb-4">Education</h2>
                 <Education />
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 1 }}
-                className="mb-8"
               >
-                <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
-                <WorkExperience />
+                <h2 className="text-2xl font-bold mb-4">Skills</h2>
+                <Skills />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 1.4 }}
+                transition={{ duration: 0.4, delay: 1.3 }}
+                className="mb-8"
               >
-                <h2 className="text-2xl font-bold mb-4">Skills</h2>
-                <Skills />
+                <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
+                <WorkExperience />
               </motion.div>
             </div>
           </motion.div>

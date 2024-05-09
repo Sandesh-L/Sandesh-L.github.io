@@ -2,7 +2,7 @@
   {
     "title": "ABC to TAB",
     "description": "A planning system to translate music written in ABC notation into guitar TAB notation. It combines the abc2abc parser, Fast-Downward Planning system, and the abctab2ps program.",
-    "tags": ["Planning", "Machine Learning", "C", "Python"],
+    "tags": ["Planning", "Machine Learning", "C", "C++", "Python", "Shell/Bash"],
     "githubLink": "https://github.com/Sandesh-L/abc2tab",
     "websiteLink": "",
     "slug": "abc-to-tab"

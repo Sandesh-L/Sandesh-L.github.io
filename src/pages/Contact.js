@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaGit } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 
@@ -55,6 +55,16 @@ const ContactPage = () => {
               <div className="flex items-center mb-4">
                 <FaLinkedin className="text-primary-500 mr-2" />
                 <a href="https://www.linkedin.com/in/sandesh-l/" 
+                  target="_blank"
+                  rel="noopener noreferrer"  
+                  className="text-text-900 hover:text-secondary-600"
+                >
+                  Sandesh-L
+                </a>
+              </div>
+              <div className="flex items-center mb-4">
+                <FaGithub className="text-primary-500 mr-2" />
+                <a href="https://github.com/Sandesh-L" 
                   target="_blank"
                   rel="noopener noreferrer"  
                   className="text-text-900 hover:text-secondary-600"

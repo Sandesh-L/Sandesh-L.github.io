@@ -1,56 +1,60 @@
 [
     {
-        "positionTitle":"ACCESS Track 2 Software Developer",
-        "companyName":"University of Kentucky",
-        "location":"Lexington, Ky",
-        "startDate":"September 2022",
-        "endDate":"Present",
-        "descriptions":[
-            "Designed and implemented a recommender system to help potential new users determine which high-performance computers (supercomputers) would best suit their needs",
-            "Used Confluence APIs to retrieve and update data",
-            "Developed documentation for logging into different high-performance computers",
-            "Designed the software architecture and implemented SQL database for efficient scaling and workflow",
-            "Helped implement unit testing and test-driven development (TDD) strategies resulting in more robust and maintainable code",
-            "Made information about GUIs, packages, and supported containers supported by different HPC systems more readily available to users"
-        ]
+      "positionTitle": "Student Researcher Technical Staff",
+      "companyName": "University of Kentucky (NSF grant)",
+      "location": "Lexington, KY",
+      "startDate": "September 2022",
+      "endDate": "Present",
+      "descriptions": [
+        "Designed and developed a recommender system to assist potential users in selecting the most suitable high-performance computers (HPCs) for their specific requirements.",
+        "Developed shell/bash scripts to automate processes for applications, improving efficiency and streamlining workflows.",
+        "Retrieved data from various high-performance computing (HPC) systems and parsed it to extract software and hardware information, enabling better decision-making.",
+        "Created a software discovery and documentation system to help users identify available software on different HPCs and provide them with relevant documentation and tutorials.",
+        "Utilized Confluence APIs to efficiently retrieve and update data.",
+        "Developed comprehensive documentation for logging into various high-performance computing systems.",
+        "Designed the software architecture and implemented an SQL database to ensure efficient scaling and streamlined workflow.",
+        "Contributed to the implementation of unit testing and test-driven development (TDD) strategies, resulting in more robust and maintainable codebase.",
+        "Enhanced user accessibility to hardware information, GUIs, and supported containers across different HPC systems."
+      ]
     },
     {
-        "positionTitle":"Software Developer",
-        "companyName":"Berea College",
-        "location":"Berea, Ky",
-        "startDate":"July 2021",
-        "endDate":"May 2022",
-        "descriptions":[
-            "Developed full-stack applications that: record volunteer and service-learning hours across multiple programs and events, kept track of college course catalogs, and kept track of inventory and labeling for different chemicals",
-            "Implemented unit tests that help reduce bugs",
-            "Used the MVC design pattern which allowed for a more straightforward implementation of new features, limited code duplication, and faster development",
-            "Improved application accessibility by adding screen reader support and changing color, text, and icons",
-            "Created application to be compatible across all devices and most browsers"
-        ]
+      "positionTitle": "Software Developer",
+      "companyName": "Berea College",
+      "location": "Berea, KY",
+      "startDate": "July 2021",
+      "endDate": "May 2022",
+      "descriptions": [
+        "Developed full-stack applications for recording volunteer and service-learning hours across multiple programs and events, managing college course catalogs, and tracking inventory and labeling for various chemicals.",
+        "Implemented networking code to handle incoming TCP and TLS connections for sending notifications and emails to users, ensuring reliable communication.",
+        "Implemented unit tests to minimize bugs and ensure code quality.",
+        "Utilized the MVC design pattern to facilitate straightforward implementation of new features, reduce code duplication, and accelerate development process.",
+        "Enhanced application accessibility by incorporating screen reader support and optimizing color, text, and icon elements.",
+        "Ensured cross-device compatibility and browser support for seamless user experience."
+      ]
     },
     {
-        "positionTitle":"Open Source Contributor",
-        "companyName":"Runestone Interactive",
-        "location":"Remote",
-        "startDate":"June 2020",
-        "endDate":"August 2020",
-        "descriptions":[
-            "Co-authored the first version of the “How to Think Like a Data Scientist” book which is available on [Runestone Academy](https://runestone.academy/runestone/books/published/httlads/index.html)",
-            "Implemented business data sets and wrote questions about and instructions on how to clean data sets as well as instructions on how to use pandas dataFrame and python",
-            "Enhanced remote learning experience by changing graphics and instructions in the book to refer to Google Colaboratory thereby removing any installation issues and allowing easier GitHub access"
-        ]
+      "positionTitle": "Open Source Contributor",
+      "companyName": "Runestone Interactive",
+      "location": "Remote",
+      "startDate": "June 2020",
+      "endDate": "August 2020",
+      "descriptions": [
+        "Co-authored the first version of the \"How to Think Like a Data Scientist\" book, available on [Runestone Academy](https://runestone.academy/runestone/books/published/httlads/index.html).",
+        "Implemented business datasets and created questions and instructions on data cleaning techniques, as well as guidance on utilizing pandas DataFrame and Python.",
+        "Enhanced the remote learning experience by modifying graphics and instructions in the book to reference Google Colaboratory, eliminating installation issues and facilitating easier GitHub access."
+      ]
     },
     {
-        "positionTitle":"Student Payroll Supervisor",
-        "companyName":"Berea College",
-        "location":"Berea, Ky",
-        "startDate":"August 2019",
-        "endDate":"May 2022",
-        "descriptions":[
-            "Developed automatic hour calculation software that reduced the time needed to check hours by 100%",
-            "Supervised student staff and created dynamic work schedules for 30+ employees which helped reduce the stress of work and classes at certain times of the semester or according to the student's needs",
-            "Tracked work hours of 30+ student employees as well as absences, tardiness, and schedule changes on a day-to-day basis, to ensure that they were able to meet their labor contracts",
-            "Supervised student staff and resolved workplace conflicts to create a comfortable and productive environment for everyone"
-        ]
+      "positionTitle": "Student Payroll Supervisor",
+      "companyName": "Berea College",
+      "location": "Berea, KY",
+      "startDate": "August 2019",
+      "endDate": "May 2022",
+      "descriptions": [
+        "Developed an automated hour calculation software that significantly reduced the time required for hour verification by 100%.",
+        "Supervised student staff and created flexible work schedules for 30+ employees, considering their academic commitments and personal needs to alleviate stress during peak times.",
+        "Monitored work hours, absences, tardiness, and schedule changes for 30+ student employees on a daily basis to ensure compliance with labor contracts.",
+        "Provided effective supervision and resolved workplace conflicts to foster a comfortable and productive environment for all team members."
+      ]
     }
-]
+  ]
