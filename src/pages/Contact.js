@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaGit } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 
@@ -38,18 +38,11 @@ const ContactPage = () => {
               <h2 className="text-2xl font-bold mb-4 text-text-900">Get in Touch</h2>
               <p className="mb-4">
                 Have any questions or inquiries? Feel free to reach out to me. I'd love to hear from you!
-                For prompt response text me, but be sure to mention who you are and how you got my information.
               </p>
               <div className="flex items-center mb-4">
                 <FaEnvelope className="text-primary-500 mr-2" />
                 <a href="mailto:sandesh.lamichhane1@gmail.com" className="text-text-900 hover:text-secondary-600">
                 sandesh.lamichhane1@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center mb-4">
-                <FaPhone className="text-primary-500 mr-2" />
-                <a href="tel:+18593537632" className="text-text-900 hover:text-secondary-600">
-                  +1 (859) 353-7632
                 </a>
               </div>
               <div className="flex items-center mb-4">

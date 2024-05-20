@@ -123,8 +123,7 @@ return(
                 className="mb-8"
               >
                 <p>Email: sandesh.lamichhane1@gmail.com</p>
-                <p>Phone: (859) 353-7632</p>
-                <p>Location: Richmond, U.S.A</p>
+                <p>Location: Richmond Ky, U.S.A</p>
               </motion.div>
               {/* <motion.div
                 initial={{ opacity: 0, x: -50 }}
