@@ -57,7 +57,7 @@ return(
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className='text-lg mb-2 text-text-700'
               >
-                <strong>Current Position:</strong> <span>Student Researcher Technical Staff</span>
+                <strong>Current Position:</strong> <span>Software Professional II</span>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, x: -50 }}
@@ -114,7 +114,7 @@ return(
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className="text-lg mb-4"
               >
-                Student Researcher Technical Staff | Software Developer
+                Software Professional II | Software Developer
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
