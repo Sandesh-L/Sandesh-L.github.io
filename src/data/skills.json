@@ -1,10 +1,10 @@
 [
   {
     "programmingLanguages": "Python, C++, C, Dart, SQL, GraphQl, Shell/Bash",
-    "webDevelopment": "Vue, React, JavaScript, HTML/CSS, Jquery",
+    "webDevelopment": "Vue, React, JavaScript, HTML/CSS, Jquery, Flask, NginX, Wsgi",
     "hpcAndCiSkills": "Slurm, Docker, Module, NumPy, Pandas, Tensorflow, PyTorch",
     "toolsAndPlatforms": "Unix, Git/GitHub, AWS applications, Atlassian applications, Pytorch, Tensorflow",
     "softSkills": "Communication, teamwork, problem-solving, leadership",
-    "coursework": "Distributed Operating Systems, Database Management, Distributed Databases, Embedded Systems, Software Engineering, Blockchain Technology"
+    "coursework": "Distributed Operating Systems, Database Management, Distributed Databases, Embedded Systems, Software Engineering, Blockchain Technology, Natural Language Processing"
   }
 ]
