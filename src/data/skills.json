@@ -2,8 +2,8 @@
   {
     "programmingLanguages": "Python, C++, C, Dart, SQL, GraphQl, Shell/Bash",
     "webDevelopment": "Vue, React, JavaScript, HTML/CSS, Jquery, Flask, NginX, Wsgi",
-    "hpcAndCiSkills": "Slurm, Docker, Module, NumPy, Pandas, Tensorflow, PyTorch",
-    "toolsAndPlatforms": "Unix, Git/GitHub, AWS applications, Atlassian applications, Pytorch, Tensorflow",
+    "toolsAndPlatforms": "Unix, Git/GitHub, AWS applications, Atlassian applications, NumPy, Pandas, Tensorflow, PyTorch",
+    "hpcAndCiSkills": "Slurm, Docker, lmod",
     "softSkills": "Communication, teamwork, problem-solving, leadership",
     "coursework": "Distributed Operating Systems, Database Management, Distributed Databases, Embedded Systems, Software Engineering, Blockchain Technology, Natural Language Processing"
   }
