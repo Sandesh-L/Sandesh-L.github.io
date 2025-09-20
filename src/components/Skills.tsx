@@ -35,7 +35,7 @@ const Skills = () => {
   ];
 
   const getCategoryColor = (category: string) => {
-    const colors = {
+    const colors: Record<string,string> = {
       sustainability: "bg-green-500/10 text-green-700 border-green-500/20",
       productivity: "bg-blue-500/10 text-blue-700 border-blue-500/20",
       frontend: "bg-purple-500/10 text-purple-700 border-purple-500/20",

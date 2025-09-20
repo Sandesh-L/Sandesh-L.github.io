@@ -1,16 +1,16 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Label } from "./ui/label";
+// import { Input } from "./ui/input";
+// import { Textarea } from "./ui/textarea";
+// import { Label } from "./ui/label";
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Handle form submission
-    console.log('Form submitted');
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // TODO: Handle form submission
+  //   console.log('Form submitted');
+  // };
 
   const contactInfo = [
     {
