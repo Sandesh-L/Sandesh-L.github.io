@@ -20,7 +20,7 @@ const About = () => {
             </div>
             <div>
               <p className="mb-6 text-lg">
-                I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences.
+                I'm a developer focused on creating fun and functional tools to solve real problems.
                 With a background in software development and HPC infrastructure, I enjoy working on projects that challenge me to learn and grow.
               </p>
               <p className="mb-6">
