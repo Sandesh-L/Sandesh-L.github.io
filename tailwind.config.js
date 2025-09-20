@@ -1,86 +1,61 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js}'],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class', // Enable class-based dark mode
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Roboto", "sans-serif"],
-        serif: ["Roboto Serif", "serif"]
-      },
-      spacing: {
-        '8xl': '96rem',
-        '9xl': '128rem',
+      colors: {
+    background: {
+      DEFAULT: '#ffffff',
+      dark: '#252525'
+    },
+    foreground: {
+      DEFAULT: '#252525',
+      dark: '#fafafa'
+    },
+    primary: {
+      DEFAULT: '#1B4332', // Main green
+      foreground: '#ffffff',
+    },
+    accent: {
+      DEFAULT: '#2D5A40',
+      foreground: '#ffffff',
+    },
+    // NEW: Earth tones
+    earth: {
+      DEFAULT: '#92400E', // Earth brown
+      foreground: '#ffffff',
+    },
+    sky: {
+      DEFAULT: '#0C4A6E', // Deep sky blue
+      foreground: '#ffffff',
+    },
+    sage: {
+      DEFAULT: '#6B7280', // Sage gray
+      foreground: '#ffffff',
+    },
+    // NEW: Soft accent
+    soft: {
+      DEFAULT: '#E5E7EB', // Light gray for backgrounds
+      foreground: '#374151',
+    },
+    muted: {
+      DEFAULT: '#ececf0',
+      foreground: '#717182',
+    },
+    border: {
+      DEFAULT: 'rgba(0, 0, 0, 0.1)',
+    }
       },
       borderRadius: {
-        '4xl': '2rem',
+        lg: '0.625rem',
+        md: 'calc(0.625rem - 2px)',
+        sm: 'calc(0.625rem - 4px)',
       },
-      colors: {
-        'text': {
-          50: '#0d0d0d',
-          100: '#1a1a1a',
-          200: '#333333',
-          300: '#4d4d4d',
-          400: '#666666',
-          500: '#808080',
-          600: '#999999',
-          700: '#b3b3b3',
-          800: '#cccccc',
-          900: '#e6e6e6',
-          950: '#f2f2f2',
-        },
-        'background': {
-          50: '#0d0d0d',
-          100: '#1a1a1a',
-          200: '#333333',
-          300: '#4d4d4d',
-          400: '#666666',
-          500: '#808080',
-          600: '#999999',
-          700: '#b3b3b3',
-          800: '#cccccc',
-          900: '#e6e6e6',
-          950: '#f2f2f2',
-        },
-        'primary': {
-          50: '#07130d',
-          100: '#0e251a',
-          200: '#1c4a34',
-          300: '#29704e',
-          400: '#379568',
-          500: '#45ba81',
-          600: '#6ac89b',
-          700: '#8fd6b4',
-          800: '#b5e3cd',
-          900: '#daf1e6',
-          950: '#ecf8f2',
-        },
-        'secondary': {
-          50: '#060913',
-          100: '#0d1226',
-          200: '#19254d',
-          300: '#263773',
-          400: '#334999',
-          500: '#405bbf',
-          600: '#667ccc',
-          700: '#8c9dd9',
-          800: '#b3bee6',
-          900: '#d9def2',
-          950: '#eceff9',
-        },
-        'accent': {
-          50: '#1a1600',
-          100: '#332b00',
-          200: '#665700',
-          300: '#998200',
-          400: '#ccad00',
-          500: '#ffd900',
-          600: '#ffe033',
-          700: '#ffe866',
-          800: '#fff099',
-          900: '#fff7cc',
-          950: '#fffbe5',
-        },
-       },       
     },
   },
-};
+  plugins: [],
+}
