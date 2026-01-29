@@ -9,8 +9,8 @@ const Experience = () => {
       company: "University of Kentucky (ITS RCI)",
       location: "Lexington, KY",
       duration: "July 2024 - Present",
-      description: "Significantly reduced HPC cluster build and maintenance time by automating processes with Ansible scripts and architecting infrastructure for multiple high-performance computing environments with Slurm scheduling and GPFS storage. Led technical team of 10 developers in application design, resulting in 2 accepted conference papers.",
-      technologies: ["SLURM", "Docker", "Podman", "PostgreSQL", "Prometheus"]
+      description: "Significantly reduced HPC cluster build and maintenance time by automating processes with Ansible scripts and architecting infrastructure for multiple high-performance computing environments with Slurm scheduling and GPFS storage. Led technical team of 10 developers in application design and AI software development.",
+      technologies: ["SLURM", "Docker", "Podman", "PostgreSQL", "Prometheus", "Transformers", "PyTorch"]
 
     },
     {

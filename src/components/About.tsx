@@ -29,7 +29,7 @@ const About = () => {
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-accent bg-opacity-10 text-accent rounded-full">Creative Problem Solver</span>
-                <span className="px-3 py-1 bg-accent/10 text-accent rounded-full">Team Player</span>
+                {/* <span className="px-3 py-1 bg-accent/10 text-accent rounded-full">Team Player</span> */}
                 <span className="px-3 py-1 bg-accent/10 text-accent rounded-full">Continuous Learner</span>
               </div>
             </div>

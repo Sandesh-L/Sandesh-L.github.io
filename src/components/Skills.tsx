@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Code, Database, Cpu, Cloud } from "lucide-react";
+import { Code, Database, Cpu, Cloud, Brain } from "lucide-react";
 
 const Skills = () => {
   const skills = [
@@ -27,11 +27,18 @@ const Skills = () => {
       icon: <Cloud className="h-6 w-6"/>,
       skills: ["AWS applications", "Atlassian (Jira, Confluence)", "Linux", "Git/GitHub", "CI/CD (Github Actions, Jenkins)"],
       category: "cloud"
+    },
+    {
+      title: "Machine Learning",
+      icon: <Brain className="h-6 w-6"/>,
+      skills: ["LLMs", "Computer Vision", "Retrial Augmented Generation (RAG)",
+              "Model Context Protocol (MCP)", "Agents"],
+      category: "sustainability"
     }
   ];
 
   const interests = [
-    "Open Source", "Machine Learning", "Music", "Reading", "Minimalism", "Tinkering"
+    "Open Source", "Machine Learning", "Music", "Reading", "Tinkering"
   ];
 
   const getCategoryColor = (category: string) => {
