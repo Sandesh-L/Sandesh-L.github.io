@@ -25,7 +25,7 @@ const Skills = () => {
     {
       title: "Cloud & DevOps",
       icon: <Cloud className="h-6 w-6"/>,
-      skills: ["AWS applications", "Atlassian (Jira, Confluence)", "Linux", "Git/GitHub", "CI/CD (Github Actions, Jenkins)"],
+      skills: ["AWS Applications", "Azure Applications", "Atlassian (Jira, Confluence)", "Linux", "Git/GitHub", "CI/CD (Github Actions, Jenkins)"],
       category: "cloud"
     },
     {
