@@ -31,7 +31,7 @@ const Skills = () => {
     {
       title: "Machine Learning",
       icon: <Brain className="h-6 w-6"/>,
-      skills: ["LLMs", "Computer Vision", "Retrial Augmented Generation (RAG)",
+      skills: ["LLMs", "Computer Vision", "Retrieval Augmented Generation (RAG)",
               "Model Context Protocol (MCP)", "Agents"],
       category: "sustainability"
     }
