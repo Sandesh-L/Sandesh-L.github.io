@@ -19,7 +19,7 @@ const Skills = () => {
     {
       title: "HPC & Infrastructure",
       icon: <Cpu className="h-6 w-6" />,
-      skills: ["SLURM", "Lmod", "Grafana", "Prometheus", "Docker", "Podman", "Singularity", "OpenOnDemand"],
+      skills: ["SLURM", "Lmod", "Grafana", "TCP/IP Networking", "Prometheus", "Docker", "Podman", "Singularity", "OpenOnDemand"],
       category: "infrastructure"
     },
     {
