@@ -15,7 +15,7 @@ const Hero = () => {
             Hello, I'm <span className="text-sky">Sandesh Lamichhane</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I build things to solve my own problems, and hopefully yours too.
+            I build things to solve my problems, and hopefully yours too.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button
