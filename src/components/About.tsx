@@ -12,26 +12,22 @@ const About = () => {
             <div>
               <Card className="border-accent/20">
                 <CardContent className="p-8">
-                  <div className="w-48 h-48 bg-accent/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-6xl">👋</span>
+                  <div className="w-48 h-48 bg-gradient-to-br from-primary to-accent rounded-full mx-auto flex items-center justify-center shadow-lg ring-4 ring-accent/10">
+                    <span className="text-8xl font-serif italic text-primary-foreground select-none translate-y-[-4px]">SL</span>
                   </div>
                 </CardContent>
               </Card>
             </div>
             <div>
               <p className="mb-6 text-lg">
-                I'm a developer focused on creating fun and functional tools to solve real problems.
-                With a background in software development and HPC infrastructure, I enjoy working on projects that challenge me to learn and grow.
+                I'm a developer based in Kentucky. I build things to solve problems in my life and in the lives of people around me. Sometimes that's the HPC platforms ~1,200 researchers at the University of Kentucky run their work on, sometimes a freelance website for a local business that needed one, and sometimes a bilingual Nepali genealogy app I built so my own family could keep track of itself.
               </p>
               <p className="mb-6">
-                When I'm not coding, you can find me exploring new technologies, reading,
-                or enjoying the outdoors.
+                When I'm not coding, you'll find me reading, playing flute or piano, or tinkering with whatever I'm currently obsessed with.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-accent bg-opacity-10 text-accent rounded-full">Creative Problem Solver</span>
-                {/* <span className="px-3 py-1 bg-accent/10 text-accent rounded-full">Team Player</span> */}
-                <span className="px-3 py-1 bg-accent/10 text-accent rounded-full">Continuous Learner</span>
-              </div>
+              <p>
+                On the work side, I'm currently digging into computer vision and knowledge synthesis systems.
+              </p>
             </div>
           </div>
         </div>

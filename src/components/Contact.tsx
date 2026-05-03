@@ -12,7 +12,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Location",
-      value: "Richmond, KY",
+      value: "Richmond, KY · open across the US",
       href: "#"
     }
   ];
@@ -21,7 +21,7 @@ const Contact = () => {
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      href: "https://github.com/sandesh-l"
+      href: "https://github.com/Sandesh-L"
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
@@ -42,9 +42,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl mb-6 text-primary">Let's Connect</h3>
               <p className="text-muted-foreground mb-8 text-lg">
-                I'm always interested in new opportunities and collaborations.
-                Whether you have a project in mind or just want to chat about something,
-                feel free to reach out!
+                I'm always happy to chat about side projects, HPC, interesting technical problems, or potential new roles. If you have something on your mind, or just want to say hi, drop me a line.
               </p>
 
               <div>

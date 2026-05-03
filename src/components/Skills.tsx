@@ -1,55 +1,43 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Code, Database, Cpu, Cloud, Brain } from "lucide-react";
+import { Code, Globe, Cpu, Brain } from "lucide-react";
 
 const Skills = () => {
   const skills = [
     {
-      title: "Frontend Development",
+      title: "Languages",
       icon: <Code className="h-6 w-6" />,
-      skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "HTML", "CSS"],
-      category: "frontend"
+      skills: ["Python", "Go", "C/C++", "SQL", "JavaScript", "TypeScript"],
+      category: "languages",
     },
     {
-      title: "Backend",
-      icon: <Database className="h-6 w-6" />,
-      skills: ["Python", "C++", "Go", "PostgreSQL", "REST APIs", "GraphQL", "Node.js"],
-      category: "backend"
+      title: "Web & Backend",
+      icon: <Globe className="h-6 w-6" />,
+      skills: ["React", "Vue", "Django", "FastAPI", "Tailwind CSS", "PostgreSQL"],
+      category: "web",
     },
     {
-      title: "HPC & Infrastructure",
+      title: "HPC & Systems",
       icon: <Cpu className="h-6 w-6" />,
-      skills: ["SLURM", "Lmod", "Grafana", "TCP/IP Networking", "Prometheus", "Docker", "Podman", "Singularity", "OpenOnDemand"],
-      category: "infrastructure"
+      skills: ["Slurm", "GPFS", "Ansible", "Docker", "Kubernetes", "Singularity / Apptainer", "MPI", "InfiniBand", "Linux", "AWS"],
+      category: "infrastructure",
     },
     {
-      title: "Cloud & DevOps",
-      icon: <Cloud className="h-6 w-6"/>,
-      skills: ["AWS Applications", "Azure Applications", "Atlassian (Jira, Confluence)", "Linux", "Git/GitHub", "CI/CD (Github Actions, Jenkins)"],
-      category: "cloud"
+      title: "AI / ML",
+      icon: <Brain className="h-6 w-6" />,
+      skills: ["PyTorch", "LLMs", "RAG", "MCP", "NVIDIA GPUs", "Computer Vision", "NLP"],
+      category: "ml",
     },
-    {
-      title: "Machine Learning",
-      icon: <Brain className="h-6 w-6"/>,
-      skills: ["LLMs", "Computer Vision", "Retrieval Augmented Generation (RAG)",
-              "Model Context Protocol (MCP)", "Agents"],
-      category: "sustainability"
-    }
   ];
 
-  const interests = [
-    "Open Source", "Machine Learning", "Music", "Reading", "Tinkering"
-  ];
+  const interests = ["Reading", "Flute", "Piano", "Tinkering", "Open Source"];
 
   const getCategoryColor = (category: string) => {
-    const colors: Record<string,string> = {
-      sustainability: "bg-green-500/10 text-green-700 border-green-500/20",
-      productivity: "bg-blue-500/10 text-blue-700 border-blue-500/20",
-      frontend: "bg-purple-500/10 text-purple-700 border-purple-500/20",
-      backend: "bg-orange-500/10 text-orange-700 border-orange-500/20",
+    const colors: Record<string, string> = {
+      languages: "bg-purple-500/10 text-purple-700 border-purple-500/20",
+      web: "bg-orange-500/10 text-orange-700 border-orange-500/20",
       infrastructure: "bg-gray-500/10 text-gray-700 border-gray-500/20",
-      cloud: "bg-cyan-500/10 text-cyan-700 border-cyan-500/20",
-      featured: "bg-amber-500/10 text-amber-700 border-amber-500/20",
+      ml: "bg-green-500/10 text-green-700 border-green-500/20",
     };
     return colors[category] || "bg-gray-500/10 text-gray-700";
   };
@@ -62,7 +50,7 @@ const Skills = () => {
             Skills & Interests
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
             {skills.map((skill, index) => (
               <Card key={index} className="border-accent/20 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-3">
@@ -88,7 +76,7 @@ const Skills = () => {
             ))}
           </div>
 
-          <Card className="border-accent/20 flex">
+          <Card className="border-accent/20">
             <CardHeader>
               <CardTitle className="text-primary text-center">Personal Interests</CardTitle>
             </CardHeader>

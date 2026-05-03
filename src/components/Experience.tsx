@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { CalendarDays, MapPin } from "lucide-react";
+import { Button } from "./ui/button";
+import { CalendarDays, MapPin, FileText } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
@@ -9,54 +10,47 @@ const Experience = () => {
       company: "University of Kentucky (ITS RCI)",
       location: "Lexington, KY",
       duration: "July 2024 - Present",
-      description: "Significantly reduced HPC cluster build and maintenance time by automating processes with Ansible scripts and architecting infrastructure for multiple high-performance computing environments with Slurm scheduling and GPFS storage. Led technical team of 10 developers in application design and AI software development.",
-      technologies: ["SLURM", "Docker", "Podman", "PostgreSQL", "Prometheus", "Transformers", "PyTorch"]
-
+      description: "I help build and run the platforms researchers at UKy actually use day-to-day: account portals, software-discovery tooling, the cluster-build automation that keeps the toil under control, and the LLM/RAG infrastructure powering the ACCESS chatbot. The cluster side is what I came for; the platform side is what I've grown into.",
+      technologies: ["Slurm", "GPFS", "Ansible", "Python", "Django", "Angular", "NVIDIA GPUs", "InfiniBand", "LLM / RAG", "MCP"]
     },
     {
-      title: "Software Developer",
-      company: "NSF ACCESS Support (UKy)",
+      title: "ACCESS Track 2 Software Developer",
+      company: "University of Kentucky (NSF)",
       location: "Lexington, KY",
       duration: "September 2022 - June 2024",
-      description: "Designed and implemented the ACCESS Resource Advisor recommender system to help users select optimal high-performance computers for their needs. Developed REST APIs serving thousands of daily requests for HPC system information and designed SQL database architecture for efficient scaling.",
-      technologies: ["Python", "Sqlite", "REST API", "HTML", "PostgreSQL"]
+      description: "Built tools to make national HPC infrastructure less mysterious to first-time users: the ACCESS Resource Advisor (which national supercomputer fits your problem?) and the first version of the Software Documentation Service (what's actually installed where?).",
+      technologies: ["Python", "PostgreSQL", "REST APIs", "Recommender Systems", "SQL"]
     },
     {
       title: "Software Developer",
       company: "Berea College",
       location: "Berea, KY",
-      duration: "Jully 2021 - May 2022",
-      description: "Developed full-stack applications for tracking volunteer hours, course catalogs, and chemical inventory management. Implemented unit tests and MVC design patterns while ensuring cross-device compatibility and accessibility features including screen reader support.",
-      technologies: ["Python", "MySQL", "JavaScript", "Bootstrap", "HTML"]
+      duration: "July 2021 - May 2022",
+      description: "My first real dev job. Worked on small full-stack apps for departments around campus that needed them: volunteer hours, course catalogs, a chemical inventory. Not glamorous, but it taught me how to ship.",
+      technologies: ["Python", "Flask", "MySQL", "JavaScript", "Bootstrap", "MVC"]
     },
     {
       title: "Open Source Contributor",
       company: "Runestone Interactive",
       location: "Remote",
       duration: "June 2020 - August 2020",
-      description: "Co-authored the first version of the How to Think Like a Data Scientist book on Runestone Academy, implementing business datasets and creating comprehensive instructions for data cleaning, pandas DataFrame usage, and Python programming.",
-      technologies: ["Python", "Scikit-learn", "Pandas", "reStructuredText"]
+      description: "Spent a summer co-authoring a data-science textbook on Runestone Academy. Wrote the business datasets, the data-cleaning chapters, and the pandas / scikit-learn intros. My first taste of teaching by writing.",
+      technologies: ["Python", "pandas", "scikit-learn", "Google Colab", "reStructuredText"]
     }
   ];
 
   const education = [
     {
-      degree: "Master's of Science in Computer Science",
+      degree: "Master of Science in Computer Science",
       institution: "University of Kentucky",
-      location: "Kentucky, USA",
-      duration: "2022 - 2024",
+      location: "Lexington, KY",
+      duration: "Aug. 2022 - May 2024",
     },
     {
-      degree: "Bachelor's of Arts in Computer Science",
+      degree: "B.A. in Computer & Information Sciences and Mathematics (double major)",
       institution: "Berea College",
-      location: "Kentucky, USA",
-      duration: "2018 - 2022",
-    },
-    {
-      degree: "Bachelor's of Arts in Mathematics",
-      institution: "Berea College",
-      location: "Kentucky, USA",
-      duration: "2018 - 2022",
+      location: "Berea, KY",
+      duration: "Aug. 2018 - May 2022",
     }
   ];
 
@@ -70,7 +64,18 @@ const Experience = () => {
 
           {/* Experience Section */}
           <div className="mb-16">
-            <h3 className="text-2xl mb-8 text-primary">Work Experience</h3>
+            <div className="flex items-center justify-between mb-8">
+              <h3 className="text-2xl text-primary">Work Experience</h3>
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                onClick={() => window.open("/resume.pdf", "_blank")}
+              >
+                <FileText className="h-4 w-4 mr-2" />
+                Full Resume
+              </Button>
+            </div>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <Card key={index} className="border-accent/20">
