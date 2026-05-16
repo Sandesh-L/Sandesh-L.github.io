@@ -11,17 +11,35 @@ import myPariwar from "../assets/project_images/myPariwar.png";
 type Project = {
   title: string;
   description: string;
-  image: string;
+  image?: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  status?: string;
 };
 
 const buttonClass =
   "border-accent text-accent hover:bg-accent hover:text-accent-foreground";
 
 const Projects = () => {
+  const inProgress: Project[] = [
+    {
+      title: "LOOM",
+      description:
+        "A cross-domain trend detection system I've been chipping away at since January. Stuff is happening everywhere and it's hard to pick out signal from noise. LOOM is my attempt to pull it out, and help connect the dots on what's going on, and maybe where it's going.",
+      technologies: ["Python", "SQLAlchemy", "Postgres", "Pydantic v2", "Pyright", "ruff", "uv"],
+      status: "MVP-stage",
+    },
+    {
+      title: "Edge ML inference",
+      description:
+        "Playing with Whisper variants, MediaPipe, and Meta's SAM2 / SAM3D, with ONNX gluing the toolchain together. Mostly figuring out what actually fits on the device you have, not the device the model was trained on.",
+      technologies: ["PyTorch", "TensorFlow / tflite", "ONNX", "Whisper", "MediaPipe", "Meta SAM"],
+      status: "Tinkering",
+    },
+  ];
+
   const projects: Project[] = [
     {
       title: "MyPariwar",
@@ -76,19 +94,31 @@ const Projects = () => {
         project.featured ? "ring-2 ring-accent/30" : ""
       }`}
     >
-      <div className="relative overflow-hidden rounded-t-lg">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
-        />
-        {project.featured && (
-          <Badge className="absolute top-3 left-3 bg-accent">Featured</Badge>
-        )}
-      </div>
+      {project.image && (
+        <div className="relative overflow-hidden rounded-t-lg">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+          />
+          {project.featured && (
+            <Badge className="absolute top-3 left-3 bg-accent">Featured</Badge>
+          )}
+        </div>
+      )}
 
       <CardHeader className="pb-3">
-        <CardTitle className="text-primary text-lg">{project.title}</CardTitle>
+        <div className="flex items-start justify-between gap-2">
+          <CardTitle className="text-primary text-lg">{project.title}</CardTitle>
+          {project.status && (
+            <Badge
+              variant="outline"
+              className="border-accent text-accent whitespace-nowrap text-xs"
+            >
+              {project.status}
+            </Badge>
+          )}
+        </div>
         <CardDescription className="text-muted-foreground text-sm">
           {project.description}
         </CardDescription>
@@ -107,30 +137,32 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="flex gap-2">
-          {project.liveUrl && (
-            <Button
-              variant="outline"
-              size="sm"
-              className={buttonClass}
-              onClick={() => window.open(project.liveUrl, "_blank")}
-            >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              Live
-            </Button>
-          )}
-          {project.githubUrl && (
-            <Button
-              variant="outline"
-              size="sm"
-              className={buttonClass}
-              onClick={() => window.open(project.githubUrl, "_blank")}
-            >
-              <Github className="h-4 w-4 mr-2" />
-              Code
-            </Button>
-          )}
-        </div>
+        {(project.liveUrl || project.githubUrl) && (
+          <div className="flex gap-2">
+            {project.liveUrl && (
+              <Button
+                variant="outline"
+                size="sm"
+                className={buttonClass}
+                onClick={() => window.open(project.liveUrl, "_blank")}
+              >
+                <ExternalLink className="h-4 w-4 mr-2" />
+                Live
+              </Button>
+            )}
+            {project.githubUrl && (
+              <Button
+                variant="outline"
+                size="sm"
+                className={buttonClass}
+                onClick={() => window.open(project.githubUrl, "_blank")}
+              >
+                <Github className="h-4 w-4 mr-2" />
+                Code
+              </Button>
+            )}
+          </div>
+        )}
       </CardContent>
     </Card>
   );
@@ -140,8 +172,19 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center mb-10 text-primary">
-            Things I've Built
+            Projects
           </h2>
+
+          <h3 className="text-xl text-primary mb-6 text-center">
+            In progress
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {inProgress.map(renderCard)}
+          </div>
+
+          <h3 className="text-xl text-primary mb-6 text-center">
+            Things I've Built
+          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map(renderCard)}
           </div>

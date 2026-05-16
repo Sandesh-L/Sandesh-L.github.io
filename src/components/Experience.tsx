@@ -10,8 +10,8 @@ const Experience = () => {
       company: "University of Kentucky (ITS RCI)",
       location: "Lexington, KY",
       duration: "July 2024 - Present",
-      description: "I help build and run the platforms researchers at UKy actually use day-to-day: account portals, software-discovery tooling, the cluster-build automation that keeps the toil under control, and the LLM/RAG infrastructure powering the ACCESS chatbot. The cluster side is what I came for; the platform side is what I've grown into.",
-      technologies: ["Slurm", "GPFS", "Ansible", "Python", "Django", "Angular", "NVIDIA GPUs", "InfiniBand", "LLM / RAG", "MCP"]
+      description: "I help build and run the platforms researchers at UKy actually use day-to-day: an account portal, the Software Documentation Service (a small platform a few teams now depend on), the cluster-build automation that keeps the toil under control, and the LLM/RAG/MCP work for the ACCESS ecosystem. The cluster side is what I came for; the platform side is what I've grown into.",
+      technologies: ["Slurm", "GPFS", "Ansible", "Python", "Django", "FastAPI", "Angular", "NVIDIA GPUs", "InfiniBand", "LLM / RAG", "MCP"]
     },
     {
       title: "ACCESS Track 2 Software Developer",
