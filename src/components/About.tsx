@@ -22,11 +22,8 @@ const About = () => {
               <p className="mb-6 text-lg">
                 I'm a developer based in Kentucky. I build things to solve problems in my life and in the lives of people around me. Sometimes that's the HPC platforms ~1,200 researchers at the University of Kentucky run their work on, sometimes a freelance website for a local business that needed one, and sometimes a bilingual Nepali genealogy app I built so my own family could keep track of itself.
               </p>
-              <p className="mb-6">
-                When I'm not coding, you'll find me reading, playing flute or piano, or tinkering with whatever I'm currently obsessed with.
-              </p>
               <p>
-                On the work side, I'm currently digging into computer vision and knowledge synthesis systems.
+                When I'm not coding, you'll find me reading, playing flute or piano, or tinkering with whatever I'm currently obsessed with.
               </p>
             </div>
           </div>
